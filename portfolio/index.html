@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spencer Vargo · Mechanical Engineering Portfolio</title>
+    <meta name="description" content="Portfolio of Spencer Vargo, Mechanical Engineer: projects, skills, certifications, and contact.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#home">SV</a>
+            <nav class="nav">
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#about">About</a>
+                <a href="#contact" class="btn btn-small">Contact</a>
+                <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle theme">🌓</button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero container">
+            <div class="hero-text">
+                <h1>Spencer Vargo</h1>
+                <p class="subtitle">Mechanical Engineer focused on product design, analysis, and manufacturing.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-media">
+                <img src="assets/img/placeholder-hero.png" alt="Mechanical design illustration" />
+            </div>
+        </section>
+
+        <section id="projects" class="section container">
+            <div class="section-head">
+                <h2>Projects</h2>
+                <div class="filters" role="tablist" aria-label="Project filters">
+                    <button class="chip active" data-filter="all" role="tab" aria-selected="true">All</button>
+                    <button class="chip" data-filter="design" role="tab">Design</button>
+                    <button class="chip" data-filter="analysis" role="tab">Analysis</button>
+                    <button class="chip" data-filter="manufacturing" role="tab">Manufacturing</button>
+                </div>
+            </div>
+            <div class="grid projects-grid">
+                <article class="card" data-tags="design manufacturing">
+                    <img src="assets/img/placeholder-project.png" alt="CNC machined enclosure" />
+                    <div class="card-body">
+                        <h3>CNC Machined Enclosure</h3>
+                        <p>Designed a lightweight aluminum enclosure optimizing stiffness-to-weight using topology optimization and DfM.</p>
+                        <ul class="meta">
+                            <li>CAD: SolidWorks</li>
+                            <li>Process: CNC 3-axis</li>
+                            <li>Result: 28% mass reduction</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="card" data-tags="analysis">
+                    <img src="assets/img/placeholder-project.png" alt="FEA bracket analysis" />
+                    <div class="card-body">
+                        <h3>Bracket FEA and Validation</h3>
+                        <p>Linear static FEA of a steel bracket with hand-checks and strain gauge validation to correlate safety factors.</p>
+                        <ul class="meta">
+                            <li>FEA: ANSYS</li>
+                            <li>Validation: Strain gauges</li>
+                            <li>Result: SF ≥ 2.0</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="card" data-tags="manufacturing">
+                    <img src="assets/img/placeholder-project.png" alt="Injection molded part" />
+                    <div class="card-body">
+                        <h3>Injection Molded Housings</h3>
+                        <p>Converted 3D prints to production-ready plastic parts, adding draft, ribs, and uniform wall thickness.</p>
+                        <ul class="meta">
+                            <li>Material: ABS</li>
+                            <li>Tooling: 2-cavity</li>
+                            <li>Result: 30% cost savings</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="section container">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill-group">
+                    <h3>CAD & Design</h3>
+                    <div class="chips">
+                        <span class="chip">SolidWorks</span>
+                        <span class="chip">Fusion 360</span>
+                        <span class="chip">GD&T</span>
+                        <span class="chip">Tolerance Stackups</span>
+                        <span class="chip">Design for Manufacturing</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Analysis</h3>
+                    <div class="chips">
+                        <span class="chip">FEA</span>
+                        <span class="chip">Fatigue</span>
+                        <span class="chip">Thermal</span>
+                        <span class="chip">Vibration</span>
+                        <span class="chip">MATLAB</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Manufacturing</h3>
+                    <div class="chips">
+                        <span class="chip">CNC</span>
+                        <span class="chip">Additive</span>
+                        <span class="chip">Injection Molding</span>
+                        <span class="chip">DFM/DFA</span>
+                        <span class="chip">Supplier Management</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3>Tooling & Process</h3>
+                    <div class="chips">
+                        <span class="chip">Jigs & Fixtures</span>
+                        <span class="chip">Root Cause Analysis</span>
+                        <span class="chip">Lean/5S</span>
+                        <span class="chip">FAI/PPAP</span>
+                        <span class="chip">Documentation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="section container">
+            <h2>Certifications</h2>
+            <ol class="timeline">
+                <li>
+                    <div class="time">2024</div>
+                    <div class="content">
+                        <h3>CSWP: Certified SolidWorks Professional</h3>
+                        <p>Advanced part modeling, assemblies, and design evaluation.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="time">2023</div>
+                    <div class="content">
+                        <h3>Six Sigma Green Belt</h3>
+                        <p>DMAIC, statistical process control, and continuous improvement.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="time">2022</div>
+                    <div class="content">
+                        <h3>ANSYS Structural Analysis</h3>
+                        <p>Meshing strategy, boundary conditions, and validation techniques.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section id="about" class="section container">
+            <h2>About</h2>
+            <p>I'm Spencer Vargo, a mechanical engineer who enjoys turning ideas into reliable products. I bridge design intent with manufacturing realities, balancing performance, cost, and schedule.</p>
+            <p>Interests include mechatronics, sustainable manufacturing, and engineered simplicity.</p>
+        </section>
+
+        <section id="contact" class="section container">
+            <h2>Contact</h2>
+            <div class="contact">
+                <a class="btn" href="mailto:spencer.vargo@example.com">Email</a>
+                <a class="btn btn-outline" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                <a class="btn btn-outline" href="assets/Spencer_Vargo_Resume.pdf" target="_blank">Resume</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer container">
+        <p>© <span id="year"></span> Spencer Vargo • Mechanical Engineering Portfolio</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
