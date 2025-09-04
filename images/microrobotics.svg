@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5cc8ff"/>
+      <stop offset="1" stop-color="#7cf29a"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="18" fill="url(#g1)"/>
+  <g fill="#0b0e14" opacity=".85">
+    <circle cx="220" cy="180" r="64"/>
+    <rect x="280" y="160" width="140" height="40" rx="8"/>
+    <circle cx="460" cy="180" r="20"/>
+  </g>
+  <text x="24" y="332" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="22" fill="#0b0e14" opacity=".9">Microrobotics</text>
+</svg>
+
