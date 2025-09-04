@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Talaria Electric Dirtbike CAD | Spencer Vargo</title>
+    <meta name="description" content="Complete 3D CAD of a Talaria electric dirtbike in SOLIDWORKS, with approximated mechanical properties and kinematics." />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      /* Page-local helpers for media; kept minimal and generic */
+      .media-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: .75rem; }
+      .media-grid > * { grid-column: span 6; }
+      .media-grid img { width: 100%; height: auto; border-radius: 10px; display: block; box-shadow: var(--shadow); }
+      .video-wrapper { position: relative; width: 100%; padding-top: 56.25%; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--border); background: color-mix(in oklab, var(--panel), transparent 20%); }
+      .video-wrapper iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+      @media (max-width: 900px) { .media-grid > * { grid-column: span 12; } }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html#home" aria-label="Back to home">
+          <span class="brand-mark" aria-hidden="true">SV</span>
+          <span class="brand-text">Spencer Vargo</span>
+        </a>
+        <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav id="site-nav" class="site-nav" role="navigation">
+          <ul>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#certifications">Certifications</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="site-main" tabindex="-1">
+      <section class="section">
+        <div class="container">
+          <h1>Talaria Electric Dirtbike CAD</h1>
+          <p class="section-intro">Completely designed a Talaria-style electric dirtbike in 3D CAD using SOLIDWORKS. Focused on approximating key mechanical properties—geometry, mass distribution, suspension kinematics, and drivetrain layout—for realistic behavior and analysis.</p>
+
+          <div class="grid">
+            <div style="grid-column: span 7;">
+              <h2>Overview</h2>
+              <p>The project replicates the Talaria electric dirtbike platform as a fully featured assembly. I modeled the frame, swingarm, steering head, triple clamps, wheels, tires, brake rotors, and an electric drivetrain package. Suspension motion (front telescopic fork and rear linkage) was captured with mates and reference geometry to inspect travel, anti‑squat tendencies, and interference risks.</p>
+
+              <h2>Mechanical Properties and Methods</h2>
+              <ul>
+                <li>Mass properties approximated via material assignments and custom mass for COTS components.</li>
+                <li>Center of gravity and moment of inertia evaluated at assembly level for ride feel estimation.</li>
+                <li>Suspension kinematics explored with configuration‑driven positions and mate controllers.</li>
+                <li>Clearance checks across full travel and steering sweep to de‑risk packaging.</li>
+              </ul>
+
+              <h2>Technologies</h2>
+              <ul class="pill-list">
+                <li>SOLIDWORKS</li>
+                <li>3D CAD</li>
+                <li>Kinematics</li>
+                <li>Materials & Mass Props</li>
+              </ul>
+
+              <div style="margin-top: 1.5rem;">
+                <a class="button" href="../index.html#projects">← Back to Projects</a>
+              </div>
+            </div>
+
+            <aside style="grid-column: span 5;">
+              <div class="card" style="grid-template-rows: auto auto;">
+                <div class="card-body">
+                  <h3>Media</h3>
+                  <p>Add SOLIDWORKS renders, assembly screenshots, and an animation of the suspension travel here. Replace placeholders below with your files.</p>
+                  <div class="media-grid">
+                    <img src="../images/hero-placeholder.svg" alt="Talaria CAD render placeholder" />
+                    <img src="../images/hero-placeholder.svg" alt="Suspension linkage close‑up placeholder" />
+                  </div>
+                  <div style="margin-top: 1rem;">
+                    <div class="video-wrapper">
+                      <!-- Replace the src with your hosted video URL (YouTube, Vimeo, or self-hosted MP4 in /videos) -->
+                      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Talaria CAD Animation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <p style="color: var(--muted); margin-top: .5rem;">Tip: Store images in <code>/images</code> and videos in <code>/videos</code> (e.g., MP4 with H.264/AAC). Use the embed above for YouTube/Vimeo, or swap for a local <code>&lt;video controls&gt;</code> tag.</p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Spencer Vargo. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+  </html>
+
