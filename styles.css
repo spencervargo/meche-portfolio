@@ -191,6 +191,9 @@ body {
   display: grid;
   grid-template-rows: 160px auto;
 }
+.card-link { text-decoration: none; color: inherit; position: relative; transition: transform .12s ease, box-shadow .12s ease; }
+.card-link:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; border-radius: 16px; }
+.card-link:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(0,0,0,.35); }
 .card-media.placeholder { background: linear-gradient(135deg, color-mix(in oklab, var(--primary), transparent 80%), color-mix(in oklab, var(--accent), transparent 80%)); opacity: .5; }
 .card-body { padding: 1rem; }
 .pill-list { list-style: none; display: flex; gap: .5rem; margin: .75rem 0 0; padding: 0; flex-wrap: wrap; }

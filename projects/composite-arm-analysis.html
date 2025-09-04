@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Composite Arm Analysis | Spencer Vargo</title>
+    <meta name="description" content="Detailed case study for Composite Arm Analysis project by Spencer Vargo." />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html#home" aria-label="Back to home">
+          <span class="brand-mark" aria-hidden="true">SV</span>
+          <span class="brand-text">Spencer Vargo</span>
+        </a>
+        <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+        <nav id="site-nav" class="site-nav" role="navigation">
+          <ul>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#certifications">Certifications</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="site-main" tabindex="-1">
+      <section class="section">
+        <div class="container">
+          <h1>Composite Arm Analysis</h1>
+          <p class="section-intro">Laminate analysis and FEA for a carbon fiber linkage; evaluated stiffness, buckling, and failure modes.</p>
+
+          <div class="grid">
+            <div style="grid-column: span 7;">
+              <h2>Overview</h2>
+              <p>Analyzed composite layups and structural performance to meet mass and stiffness targets. Iterated laminate schedule based on modal, buckling, and failure criteria.</p>
+
+              <h2>Contributions</h2>
+              <ul>
+                <li>Built material models and laminate stacks; extracted ABD matrices.</li>
+                <li>Ran FEA (linear static and eigenvalue buckling) to validate margins.</li>
+                <li>Documented results with plots and design recommendations.</li>
+              </ul>
+
+              <h2>Technologies</h2>
+              <ul class="pill-list">
+                <li>Composites</li>
+                <li>Ansys</li>
+                <li>Optimization</li>
+              </ul>
+
+              <div style="margin-top: 1.5rem;">
+                <a class="button" href="../index.html#projects">← Back to Projects</a>
+              </div>
+            </div>
+            <aside style="grid-column: span 5;">
+              <div class="card" style="grid-template-rows: 220px auto;">
+                <div class="card-media placeholder" aria-hidden="true"></div>
+                <div class="card-body">
+                  <h3>Media</h3>
+                  <p>Add contour plots, layup diagrams, or mode shapes here.</p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Spencer Vargo. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+  </html>
+
