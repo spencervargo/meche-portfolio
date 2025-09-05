@@ -210,6 +210,17 @@ body {
 .list { list-style: none; padding: 0; margin: 0; display: grid; gap: .75rem; }
 .list-item { background: color-mix(in oklab, var(--panel), transparent 10%); border: 1px solid var(--border); border-radius: 12px; padding: .9rem 1rem; display: flex; justify-content: space-between; align-items: center; }
 .list .meta { color: var(--muted); margin-left: 1rem; }
+.list-item-actions { display: flex; gap: .5rem; }
+
+/* Modal */
+.modal[hidden] { display: none !important; }
+.modal { position: fixed; inset: 0; display: grid; place-items: center; background: color-mix(in oklab, #000, transparent 35%); z-index: 1000; padding: 1rem; }
+.modal-panel { width: min(900px, 96%); max-height: 86vh; overflow: auto; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow); }
+.modal-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem; border-bottom: 1px solid var(--border); }
+.modal-body { padding: 1rem; }
+.modal-footer { padding: 1rem; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; gap: .5rem; }
+.modal-close { height: 36px; }
+.modal-footer a[aria-disabled="true"] { opacity: .5; pointer-events: none; cursor: not-allowed; }
 
 /* Timeline */
 .timeline { position: relative; margin-top: 1rem; }

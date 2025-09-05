@@ -131,6 +131,9 @@ c<!DOCTYPE html>
                   <strong>Certified SOLIDWORKS Associate (CSWA)</strong>
                   <span class="meta">Dassault Systèmes • 2025</span>
                 </div>
+                <div class="list-item-actions">
+                  <button type="button" class="button view-cert" data-cert-title="Certified SOLIDWORKS Associate (CSWA)" aria-label="View Certified SOLIDWORKS Associate (CSWA)">View</button>
+                </div>
               </div>
             </li>
             <li>
@@ -139,6 +142,9 @@ c<!DOCTYPE html>
                   <strong>Lean Six Sigma Yellow Belt</strong>
                   <span class="meta">GoLeanSixSigma • 2022</span>
                 </div>
+                <div class="list-item-actions">
+                  <button type="button" class="button view-cert" data-cert-title="Lean Six Sigma Yellow Belt" aria-label="View Lean Six Sigma Yellow Belt">View</button>
+                </div>
               </div>
             </li>
             <li>
@@ -146,6 +152,9 @@ c<!DOCTYPE html>
                 <div class="list-item-main">
                   <strong>OSHA 30-Hour General Industry</strong>
                   <span class="meta">OSHA • 2021</span>
+                </div>
+                <div class="list-item-actions">
+                  <button type="button" class="button view-cert" data-cert-title="OSHA 30-Hour General Industry" aria-label="View OSHA 30-Hour General Industry">View</button>
                 </div>
               </div>
             </li>
@@ -200,6 +209,21 @@ c<!DOCTYPE html>
         </div>
       </section>
     </main>
+
+    <div id="cert-modal" class="modal" hidden tabindex="-1">
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+        <div class="modal-header">
+          <h3 id="cert-modal-title">Certification</h3>
+          <button type="button" class="button modal-close" aria-label="Close certification viewer">Close</button>
+        </div>
+        <div class="modal-body">
+          <div id="cert-modal-content"></div>
+        </div>
+        <div class="modal-footer">
+          <a id="cert-modal-open" class="button" href="#" target="_blank" rel="noopener">Open in new tab</a>
+        </div>
+      </div>
+    </div>
 
     <footer class="site-footer">
       <div class="container footer-inner">
