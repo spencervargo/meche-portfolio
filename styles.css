@@ -190,7 +190,7 @@ body {
   overflow: hidden;
   box-shadow: var(--shadow);
   display: grid;
-  grid-template-rows: 100px auto;
+  grid-template-rows: 200px auto;
   row-gap: 4rem;
 }
 .card-media-link { display: block; height: 100%; }
