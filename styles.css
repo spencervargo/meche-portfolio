@@ -180,7 +180,7 @@ body {
   overflow: hidden;
   box-shadow: var(--shadow);
   display: grid;
-  grid-template-rows: 100px auto;
+  grid-template-rows: 220px auto;
 }
 
 .section#projects .card {
@@ -190,7 +190,7 @@ body {
   overflow: hidden;
   box-shadow: var(--shadow);
   display: grid;
-  grid-template-rows: 160px auto;
+  grid-template-rows: 100px auto;
   row-gap: 4rem;
 }
 .card-media-link { display: block; height: 100%; }
