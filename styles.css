@@ -180,7 +180,7 @@ body {
   overflow: hidden;
   box-shadow: var(--shadow);
   display: grid;
-  grid-template-rows: 220px auto;
+  grid-template-rows: 100px auto;
 }
 
 .section#projects .card {
