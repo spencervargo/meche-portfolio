@@ -229,7 +229,7 @@ body {
 /* Responsive */
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
-  .hero-art { order: -1; height: 150px; }
+  .hero-art { order: -1; height: 10px; }
   .cards > * { grid-column: span 6; }
 }
 
