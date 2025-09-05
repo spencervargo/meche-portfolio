@@ -33,7 +33,7 @@ const certModalCloseBtn = document.querySelector('.modal-close');
 
 let previouslyFocusedElement = null;
 
-function openCertModal({ title, href }) {
+function openCertModal({ title, href, imgSrc, imgAlt }) {
   if (!certModal) return;
   previouslyFocusedElement = document.activeElement;
   certModal.removeAttribute('hidden');
@@ -41,14 +41,30 @@ function openCertModal({ title, href }) {
   if (certModalTitle) certModalTitle.textContent = title || 'Certification';
   if (certModalContent) {
     certModalContent.innerHTML = '';
-    const placeholder = document.createElement('div');
-    placeholder.style.padding = '1rem';
-    placeholder.innerHTML = `<p>This certification can be viewed using the button below.</p>`;
-    certModalContent.appendChild(placeholder);
+    if (imgSrc) {
+      const mediaWrapper = document.createElement('div');
+      mediaWrapper.className = 'modal-media';
+      const imageEl = document.createElement('img');
+      imageEl.src = imgSrc;
+      imageEl.alt = imgAlt || `${title} image`;
+      imageEl.loading = 'eager';
+      imageEl.decoding = 'async';
+      imageEl.addEventListener('error', () => {
+        mediaWrapper.innerHTML = '<p style="color: var(--muted);">Unable to load image.</p>';
+      });
+      mediaWrapper.appendChild(imageEl);
+      certModalContent.appendChild(mediaWrapper);
+    } else {
+      const placeholder = document.createElement('div');
+      placeholder.style.padding = '1rem';
+      placeholder.innerHTML = `<p>No media provided. Use Open in new tab if available.</p>`;
+      certModalContent.appendChild(placeholder);
+    }
   }
   if (certModalOpenLink) {
-    if (href) {
-      certModalOpenLink.href = href;
+    const linkTarget = href || imgSrc || '';
+    if (linkTarget) {
+      certModalOpenLink.href = linkTarget;
       certModalOpenLink.removeAttribute('aria-disabled');
     } else {
       certModalOpenLink.href = '#';
@@ -90,7 +106,9 @@ document.querySelectorAll('.view-cert').forEach((button) => {
   button.addEventListener('click', () => {
     const title = button.getAttribute('data-cert-title') || 'Certification';
     const href = button.getAttribute('data-cert-href') || '';
-    openCertModal({ title, href });
+    const imgSrc = button.getAttribute('data-cert-img') || '';
+    const imgAlt = button.getAttribute('data-cert-img-alt') || '';
+    openCertModal({ title, href, imgSrc, imgAlt });
   });
 });
 

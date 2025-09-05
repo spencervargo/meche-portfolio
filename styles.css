@@ -222,6 +222,10 @@ body {
 .modal-close { height: 36px; }
 .modal-footer a[aria-disabled="true"] { opacity: .5; pointer-events: none; cursor: not-allowed; }
 
+/* Modal media */
+.modal-media { display: grid; place-items: center; }
+.modal-media img { max-width: 100%; max-height: 70vh; height: auto; width: auto; border-radius: 10px; box-shadow: var(--shadow); border: 1px solid var(--border); background: color-mix(in oklab, var(--panel), transparent 20%); }
+
 /* Timeline */
 .timeline { position: relative; margin-top: 1rem; }
 .timeline::before { content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: var(--border); }
