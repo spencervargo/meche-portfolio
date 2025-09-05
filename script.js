@@ -133,7 +133,8 @@ document.querySelectorAll('.view-cert').forEach((button) => {
   button.addEventListener('click', () => {
     const title = button.getAttribute('data-cert-title') || 'Certification';
     const href = button.getAttribute('data-cert-href') || '';
-    const imgSrc = button.getAttribute('data-cert-img') || '';
+    // Support both data-cert-img and data-cert-png for convenience
+    const imgSrc = button.getAttribute('data-cert-img') || button.getAttribute('data-cert-png') || '';
     const imgAlt = button.getAttribute('data-cert-img-alt') || '';
     const pdfSrc = button.getAttribute('data-cert-pdf') || '';
     const videoSrc = button.getAttribute('data-cert-video') || '';
