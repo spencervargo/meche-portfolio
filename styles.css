@@ -269,3 +269,18 @@ body {
   .media-grid > * { grid-column: span 12; }
 }
 
+/* Mobile polish */
+@media (max-width: 640px) {
+  .section { padding: 2.25rem 0; }
+  .hero { padding: 4.5rem 0 2rem; }
+  .hero-img img { max-width: 88%; }
+  .list-item { align-items: flex-start; flex-direction: column; gap: .5rem; }
+  .list .meta { margin-left: 0; display: block; }
+  .list-item-actions { width: 100%; justify-content: flex-start; }
+  .contact-actions { flex-direction: column; align-items: stretch; }
+  .contact-details p { margin: .25rem 0; }
+  .timeline::before { left: 6px; }
+  .timeline-item { padding-left: 2rem; }
+  .timeline-marker { left: -2px; }
+}
+
