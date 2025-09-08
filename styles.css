@@ -257,7 +257,7 @@ body {
   gap: .75rem;
   align-items: center;
 }
-.section#other .timeline-media { display: grid; place-items: center; }
+.section#other .timeline-media { display: grid; place-items: center; background: color-mix(in oklab, var(--text), transparent 88%); border: 1px solid var(--border); border-radius: 10px; padding: 6px; }
 .section#other .timeline-media img {
   max-width: 100%;
   max-height: 120px;
@@ -265,10 +265,11 @@ body {
   height: auto;
   object-fit: contain;
   object-position: center;
-  border-radius: 10px;
-  border: 1px solid var(--border);
   box-shadow: var(--shadow);
 }
+/* Featured item larger media */
+.section#other .timeline-item.featured { grid-template-columns: 1fr 220px; }
+.section#other .timeline-item.featured .timeline-media img { max-height: 150px; }
 @media (max-width: 900px) {
   .section#other .timeline-item { grid-template-columns: 1fr; }
   .section#other .timeline-media { order: -1; }
