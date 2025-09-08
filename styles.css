@@ -236,6 +236,22 @@ body {
 .timeline .meta { color: var(--muted); margin-top: .25rem; }
 .timeline ul { margin: .5rem 0 0 1rem; }
 
+/* Other (styled like timeline with subtle cards and hierarchy) */
+.section#other .timeline-content {
+  background: color-mix(in oklab, var(--panel), transparent 15%);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .75rem .9rem;
+}
+.section#other .timeline-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.section#other .timeline .meta {
+  display: block;
+  margin: .2rem 0 .3rem;
+}
+
 /* Contact */
 .contact-actions { display: flex; gap: .75rem; }
 
