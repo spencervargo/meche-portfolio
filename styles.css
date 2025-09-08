@@ -255,12 +255,14 @@ body {
   display: grid;
   grid-template-columns: 1fr 180px;
   gap: .75rem;
-  align-items: start;
+  align-items: center;
 }
+.section#other .timeline-media { display: grid; place-items: center; }
 .section#other .timeline-media img {
   width: 100%;
   height: 120px;
   object-fit: cover;
+  object-position: center;
   border-radius: 10px;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
