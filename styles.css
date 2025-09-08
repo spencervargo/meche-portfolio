@@ -251,6 +251,23 @@ body {
   display: block;
   margin: .2rem 0 .3rem;
 }
+.section#other .timeline-item {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: .75rem;
+  align-items: start;
+}
+.section#other .timeline-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+@media (max-width: 900px) {
+  .section#other .timeline-item { grid-template-columns: 1fr; }
+  .section#other .timeline-media { order: -1; }
+}
 
 /* Contact */
 .contact-actions { display: flex; gap: .75rem; }
