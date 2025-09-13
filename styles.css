@@ -157,8 +157,8 @@ body {
 .button:hover { transform: translateY(-1px); }
 
 .hero-art { position: relative; height: 280px; }
-.hero-img { position: relative; display: grid; place-items: center; height: 100%; overflow: hidden; }
-.hero-img img { max-width: 72%; max-height: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow); position: relative; }
+.hero-img { position: relative; display: grid; place-items: center; height: 100%; }
+.hero-img img { max-width: 72%; max-height: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow); position: relative; z-index: 1; }
 
 /* Sections */
 .section { padding: 4rem 0; }
@@ -291,6 +291,9 @@ body {
   .site-nav.open { transform: translateY(0); }
   .site-nav ul { flex-direction: column; padding: .5rem; }
   .nav-toggle { display: inline-flex; }
+  /* Constrain hero image on mobile/tablet only */
+  .hero-img { overflow: hidden; }
+  .hero-img img { z-index: 0; }
 }
 
 @media (max-width: 640px) {
