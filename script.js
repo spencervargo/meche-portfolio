@@ -33,7 +33,7 @@ const certModalCloseBtn = document.querySelector('.modal-close');
 
 let previouslyFocusedElement = null;
 
-function openCertModal({ title, href, imgSrc, imgAlt }) {
+function openCertModal({ title, href, imgSrc, imgAlt, pdfSrc, videoSrc }) {
   if (!certModal) return;
   previouslyFocusedElement = document.activeElement;
   certModal.removeAttribute('hidden');
@@ -41,7 +41,20 @@ function openCertModal({ title, href, imgSrc, imgAlt }) {
   if (certModalTitle) certModalTitle.textContent = title || 'Certification';
   if (certModalContent) {
     certModalContent.innerHTML = '';
-    if (imgSrc) {
+    if (videoSrc) {
+      const mediaWrapper = document.createElement('div');
+      mediaWrapper.className = 'modal-media';
+      const videoEl = document.createElement('video');
+      videoEl.src = videoSrc;
+      videoEl.controls = true;
+      videoEl.playsInline = true;
+      videoEl.preload = 'metadata';
+      videoEl.addEventListener('error', () => {
+        mediaWrapper.innerHTML = '<p style="color: var(--muted);">Unable to load video.</p>';
+      });
+      mediaWrapper.appendChild(videoEl);
+      certModalContent.appendChild(mediaWrapper);
+    } else if (imgSrc) {
       const mediaWrapper = document.createElement('div');
       mediaWrapper.className = 'modal-media';
       const imageEl = document.createElement('img');
@@ -54,6 +67,20 @@ function openCertModal({ title, href, imgSrc, imgAlt }) {
       });
       mediaWrapper.appendChild(imageEl);
       certModalContent.appendChild(mediaWrapper);
+    } else if (pdfSrc) {
+      const mediaWrapper = document.createElement('div');
+      mediaWrapper.className = 'modal-media';
+      const iframeEl = document.createElement('iframe');
+      iframeEl.src = pdfSrc;
+      iframeEl.className = 'pdf-frame';
+      iframeEl.setAttribute('title', `${title} document`);
+      iframeEl.setAttribute('loading', 'eager');
+      iframeEl.setAttribute('referrerpolicy', 'no-referrer');
+      iframeEl.addEventListener('error', () => {
+        mediaWrapper.innerHTML = '<p style="color: var(--muted);">Unable to load document.</p>';
+      });
+      mediaWrapper.appendChild(iframeEl);
+      certModalContent.appendChild(mediaWrapper);
     } else {
       const placeholder = document.createElement('div');
       placeholder.style.padding = '1rem';
@@ -62,7 +89,7 @@ function openCertModal({ title, href, imgSrc, imgAlt }) {
     }
   }
   if (certModalOpenLink) {
-    const linkTarget = href || imgSrc || '';
+    const linkTarget = href || videoSrc || imgSrc || pdfSrc || '';
     if (linkTarget) {
       certModalOpenLink.href = linkTarget;
       certModalOpenLink.removeAttribute('aria-disabled');
@@ -106,9 +133,12 @@ document.querySelectorAll('.view-cert').forEach((button) => {
   button.addEventListener('click', () => {
     const title = button.getAttribute('data-cert-title') || 'Certification';
     const href = button.getAttribute('data-cert-href') || '';
-    const imgSrc = button.getAttribute('data-cert-img') || '';
+    // Support both data-cert-img and data-cert-png for convenience
+    const imgSrc = button.getAttribute('data-cert-img') || button.getAttribute('data-cert-png') || '';
     const imgAlt = button.getAttribute('data-cert-img-alt') || '';
-    openCertModal({ title, href, imgSrc, imgAlt });
+    const pdfSrc = button.getAttribute('data-cert-pdf') || '';
+    const videoSrc = button.getAttribute('data-cert-video') || '';
+    openCertModal({ title, href, imgSrc, imgAlt, pdfSrc, videoSrc });
   });
 });
 
